@@ -7,13 +7,12 @@ from for_high_level.user import UserPage
 
 @allure.feature('Taste Case : Заполнение формы регистрации')
 def test_requirement_form():
-
-    open = FormPage()
+    open_machin = FormPage()
     photo_for_import = PhotoPage()
     personal_data = BrowserPage()
     get_send = RegistrationPage()
     user = UserPage().generate_data_users()
-    open.open()
+    open_machin.open()
 
     allure.dynamic.title(f"Регистрация студента {user['full_name']}")
 
